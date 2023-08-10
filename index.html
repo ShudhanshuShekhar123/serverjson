@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click here</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.getElementById("btn")
+    btn.addEventListener("click", () => {
+        fetch('https://mockserver-9u3i.onrender.com/feedback', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "rating": 10,
+                "user_name": "Tony Stark",
+                "text": "You are the ironman of this world"
+            }
+            ) // Convert JS object to JSON string
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse response body as JSON
+            })
+            .then(data => {
+                // Handle the JSON response
+                console.log(data);
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Fetch Error:', error);
+            });
+    })
+</script>
