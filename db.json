@@ -16,15 +16,6 @@
       "name": "rohit",
       "password": "abc546"
     }
-  ],
-  "play": [
-    {
-      "name": "John Doe",
-      "password": "password123"
-    },
-    {
-      "name": "Jane Smith",
-      "password": "secret456"
-    }
   ]
+ 
 }
