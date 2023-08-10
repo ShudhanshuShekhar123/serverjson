@@ -11,7 +11,10 @@
     {
       "name": "Alice Johnson",
       "password": "qwerty789"
+    },  {
+      "name": "rohit",
+      "password": "abc546"
     }
   ]
-  
+
 }
